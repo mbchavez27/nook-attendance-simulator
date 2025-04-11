@@ -1,38 +1,29 @@
-# sv
+# Nook Attendance Simulator
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A lightweight web-based attendance simulator built using **Svelte**. It mimics the NOOK attendance system, allowing users to input ID numbers via a numpad-style interface to simulate check-ins and check-outs.
 
-## Creating a project
+## 🎯 Purpose
 
-If you're seeing this, you've probably already done this step. Congrats!
+This tool is designed for testing and demonstration purposes, simulating a simple attendance tracking system using numeric ID entry—ideal for use in academic or organizational environments.
 
-```bash
-# create a new project in the current directory
-npx sv create
+## 🛠️ Tech Stack
 
-# create a new project in my-app
-npx sv create my-app
-```
+- **Svelte** – Frontend framework
+- **JavaScript** – App logic
+- **CSS** – Styling
 
-## Developing
+## 📸 Features
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- Interactive **numpad-style** input UI
+- Simulated attendance logic using ID numbers
+- Simple and intuitive interface
+- Fully client-side — no backend needed
 
-```bash
-npm run dev
+## 🚀 Getting Started
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
+### 1. Clone the Repository
 
 ```bash
-npm run build
+git clone https://github.com/mbchavez27/nook-attendance-simulator
+cd nook-attendance-simulator
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
