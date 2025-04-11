@@ -18,7 +18,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
-  margin: 2em;
+  margin: 1em;
 }
 
 .numpad > button,
@@ -56,6 +56,7 @@ body {
 }
 
 .enter > button {
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin: 0.5em;
 }
