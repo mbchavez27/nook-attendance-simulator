@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+body {
+  background-color: rgb(19, 19, 19);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.numpad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 2em;
+}
+
+.numpad > button,
+.enter > button {
+  background-color: rgb(168, 160, 160);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 1em;
+}
+
+.idInput {
+  display: flex;
+  justify-content: center;
+}
+.idInput > input {
+  background-color: rgb(168, 160, 160);
+  border: 1;
+  border-color: black;
+  outline: none;
+  margin: 1em;
+  padding: 1em;
+  font-family: "Inter", sans-serif;
+}
+
+.tracker {
+  background-color: rgb(68, 61, 61);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.enter {
+  display: flex;
+  justify-content: center;
+}
+
+.enter > button {
+  padding-left: 3em;
+  padding-right: 3em;
+}
