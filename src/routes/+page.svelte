@@ -1,11 +1,29 @@
-<script>
-  import "../global.css";
+<script lang="ts">
+  import axios from 'axios'
+  import '../global.css'
 
-  let inputValue = "";
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL
+
+  let inputValue = ''
+  let response = ''
+  let error = ''
 
   const clearValue = () => {
-    inputValue = "";
-  };
+    inputValue = ''
+  }
+
+  async function tapOfficer() {
+    try {
+      const res = await axios.post(`${BASE_URL}/user`, {
+        idNum: Number(inputValue),
+      })
+      response = res.data.message
+      alert(response)
+    } catch (err: any) {
+      error = err.message
+      alert(error)
+    }
+  }
 </script>
 
 <div class="content">
@@ -17,59 +35,59 @@
     <div class="numpad">
       <button
         on:click={() => {
-          inputValue += "1";
+          inputValue += '1'
         }}>1</button
       >
       <button
         on:click={() => {
-          inputValue += "2";
+          inputValue += '2'
         }}>2</button
       >
       <button
         on:click={() => {
-          inputValue += "3";
+          inputValue += '3'
         }}>3</button
       >
       <button
         on:click={() => {
-          inputValue += "4";
+          inputValue += '4'
         }}>4</button
       >
       <button
         on:click={() => {
-          inputValue += "5";
+          inputValue += '5'
         }}>5</button
       >
       <button
         on:click={() => {
-          inputValue += "6";
+          inputValue += '6'
         }}>6</button
       >
       <button
         on:click={() => {
-          inputValue += "7";
+          inputValue += '7'
         }}>7</button
       >
       <button
         on:click={() => {
-          inputValue += "8";
+          inputValue += '8'
         }}>8</button
       >
       <button
         on:click={() => {
-          inputValue += "9";
+          inputValue += '9'
         }}>9</button
       >
       <button
         on:click={() => {
-          inputValue += "0";
+          inputValue += '0'
         }}>0</button
       >
     </div>
     <div class="enter">
       <button
         on:click={() => {
-          alert("ID Number: " + inputValue);
+          tapOfficer()
         }}>Enter</button
       >
       <button on:click={clearValue}>Clear</button>
