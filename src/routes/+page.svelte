@@ -14,7 +14,7 @@
 
   async function tapOfficer() {
     try {
-      const res = await axios.post(`${BASE_URL}/user`, {
+      const res = await axios.post(`${BASE_URL}/officer/tap`, {
         idNum: Number(inputValue),
       })
       response = res.data.message
